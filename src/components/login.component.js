@@ -139,7 +139,7 @@ const Login = (props) => {
         let bici = {
             ...mascotaTemp,
         }
-        if (row != 'vacunado' && row != 'adoptado') {
+        if (row !== 'vacunado' && row !== 'adoptado') {
             bici[row] = event.target.value;
         } else {
             bici[row] = event.target.checked;
@@ -343,7 +343,7 @@ const Login = (props) => {
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block" onClick={auth}>Sign in</button>
                 <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                    Forgot <a href="/">password?</a>
                 </p>
                 <GoogleLogin
                     clientId="644418417223-a38qhqjmdo8e0vif2io8r40vk6jmk2v2.apps.googleusercontent.com"
