@@ -1,8 +1,7 @@
 import axios from "axios";
-import React, { Component, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import MaterialTable from "material-table";
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
@@ -21,7 +20,6 @@ const Login = (props) => {
     const [authenticated, setAuthenticated] = useState(false);
     const [panelmascotas, setPanelmascotas] = useState(false);
     const [mascotasList, setMascotasList] = useState([]);
-    const [mascotasListMap, setMascotasListMap] = useState([]);
     const [addMascotas, setAddmascotas] = useState(false);
     const [editMascotas, setEditmascotas] = useState(false);
 
@@ -119,10 +117,6 @@ const Login = (props) => {
 
     const handleClose = () => {
         setAddmascotas(false);
-    };
-
-    const handleOpenEdit = () => {
-        setEditmascotas(true);
     };
 
     const handleCloseEdit = () => {
